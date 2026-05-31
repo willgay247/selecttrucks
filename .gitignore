@@ -32,6 +32,12 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.dev.vars
+
+# cloudflare / opennext
+/.open-next/
+cloudflare-env.d.ts
+.wrangler/
 
 # vercel
 .vercel
@@ -39,3 +45,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large scrape artifacts (keep listings.json + seed.sql which are small)
+/data/images/
+/data/images_opt/
+/data/raw/*.html
+
+# vehicle photos — served locally, destined for R2; keep out of git history
+/public/vehicles/
+!/public/placeholder-vehicle.svg
